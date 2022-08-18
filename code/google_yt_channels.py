@@ -156,7 +156,7 @@ def channel_top_videos(topic,buffer_channels_df,watched_videos):
                     yt_vid.append(f'https://www.youtube.com{lst[-1]}')
                     n_max-=1
         except Exception as e:
-            print('This is an exception:',e)
+            logger.exception(e)
         
         return yt_vid
         

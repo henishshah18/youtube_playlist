@@ -25,7 +25,7 @@ watched_and_suggested_videos = watched_videos+suggested_videos
 
 buffer_videos = pd.read_csv('../data/buffer_topic_videos.csv')
 
-inp = input('What would you like to learn about today?:')
+inp = input('What would you like to learn about today?:  ')
 inp=inp.lower()
 
 channel_vid_dict = buffer_videos_to_list(inp,watched_and_suggested_videos)
@@ -97,9 +97,12 @@ suggested_videos+=final_video_list
 pickle.dump(suggested_videos,open('../data/suggested_yt_videos.pickle','wb'))
 yt_vid_ids=[x.split('watch?v=')[1] if '&' not in x else x.split('watch?v=')[1].split('&')[0] for x in final_video_list]
 credentials = load_credentials()
-playlist_dict = initiate_playlist(inp,credentials)
-add_videos_to_playlist(yt_vid_ids,playlist_dict,credentials)
-
+try:
+    playlist_dict = initiate_playlist(inp,credentials)
+    add_videos_to_playlist(yt_vid_ids,playlist_dict,credentials)
+except Exception as e:
+    logger.exception(e)
+    print('Sorry, our resources have exhausted for the day!')
 
         
             

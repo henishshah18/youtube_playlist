@@ -14,3 +14,120 @@ INFO:update_data:--> Pickle files updated.
 INFO:update_data:--> Buffer csv files updated.
 INFO:create_playlist:Loading Credentials From File...
 INFO:create_playlist:Refreshing Access Token...
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+INFO:create_playlist:Loading Credentials From File...
+INFO:create_playlist:Refreshing Access Token...
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+ERROR:read_browser_history:list index out of range
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/read_browser_history.py", line 71, in yt_video_content
+    duration_vid = yt_dict['items'][0]['contentDetails']['duration']
+IndexError: list index out of range
+INFO:create_playlist:Loading Credentials From File...
+INFO:create_playlist:Refreshing Access Token...
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+INFO:create_playlist:Loading Credentials From File...
+INFO:create_playlist:Refreshing Access Token...
+INFO:update_data:--> Watched youtube videos updated.
+INFO:update_data:--> Pickle files updated.
+INFO:update_data:--> Buffer csv files updated.
+INFO:create_playlist:Loading Credentials From File...
+INFO:create_playlist:Refreshing Access Token...
+ERROR:__main__:<HttpError 429 when requesting https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cstatus&alt=json returned "Resource has been exhausted (e.g. check quota).". Details: "[{'domain': 'youtube.api.v3.PlaylistInsertResponse.Error', 'reason': 'RATE_LIMIT_EXCEEDED'}]">
+Traceback (most recent call last):
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/main.py", line 101, in <module>
+    playlist_dict = initiate_playlist(inp,credentials)
+  File "/home/henishshah18/git_uploads/youtube_playlist/code/create_playlist.py", line 57, in initiate_playlist
+    response_playlist = request.execute()
+  File "/home/henishshah18/.local/lib/python3.9/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/henishshah18/.local/lib/python3.9/site-packages/googleapiclient/http.py", line 938, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 429 when requesting https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cstatus&alt=json returned "Resource has been exhausted (e.g. check quota).". Details: "[{'domain': 'youtube.api.v3.PlaylistInsertResponse.Error', 'reason': 'RATE_LIMIT_EXCEEDED'}]">
