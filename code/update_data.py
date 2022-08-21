@@ -50,11 +50,13 @@ def update_csv_files():
     buffer_channel_ids = buffer_channels.loc[:,'channel_link'].apply(lambda x:x.split('/')[-1]) 
     updated_channel_status=[1 if id in watched_channels else 0 for id in buffer_channel_ids]
     buffer_channels['channel_status']=updated_channel_status
+    buffer_channels.drop_duplicates(subset='channel_link',keep='last',inplace=True)
     buffer_channels.to_csv('../data/buffer_topic_channels.csv',index=False)
 
     buffer_video_channel_ids = buffer_videos.loc[:,'channel_link'].apply(lambda x:x.split('/')[-1])
     updated_channel_status=[1 if id in watched_channels else 0 for id in buffer_video_channel_ids]
     buffer_videos['channel_status']=updated_channel_status
+    buffer_videos.drop_duplicates(subset='vid_link',keep='last',inplace=True)
     buffer_videos.to_csv('../data/buffer_topic_videos.csv',index=False)
 
     logger.info('--> Buffer csv files updated.')
