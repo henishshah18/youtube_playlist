@@ -6,6 +6,7 @@ from read_browser_history import yt_video_content
 import pandas as pd
 import random
 import lxml
+import pickle
 from custom_logger import create_logger
 
 logger = create_logger('../data/test.log',__name__)
@@ -31,9 +32,12 @@ def find_yt_channels(inp):
     buffer_channels_df = pd.read_csv('../data/buffer_topic_channels.csv')
     buffer_channel_topics = buffer_channels_df['topic'].unique()
     if inp in buffer_channel_topics:
+        flag=0
         yt_channel_links = buffer_channels_df[buffer_channels_df['topic']==inp]['channel_link'].tolist()
+        
 
     else:
+        flag=1
         a = 'https://www.google.com/search?q=top+youtube+channels+for+learning'
         for word in inp.split():
             a+= f'+{word}'
@@ -79,7 +83,7 @@ def find_yt_channels(inp):
                         continue
             except:
                 continue
-    return list(set(yt_channel_links))
+    return list(set(yt_channel_links)),flag
 
 def get_channel_ids(yt_channel_links):
     channel_ids = []
@@ -361,27 +365,27 @@ def buffer_videos_to_list(inp,watched_videos):
 
 if __name__=='__main__':
 
-    inp = input('What would you like to learn about today?:')
-    yt_channels = find_yt_channels(inp)
-    top_channels = yt_channels[:1]
-    buffer_channels = yt_channels[1:]
-    yt_channel,yt_vid = channel_top_videos(top_channels)
-    yt_vid = list(set(yt_vid))
-    yt_vid_id=[x.split('watch?v=')[1] for x in yt_vid]
+    # inp = input('What would you like to learn about today?:')
+    # yt_channels = find_yt_channels(inp)
+    # top_channels = yt_channels[:1]
+    # buffer_channels = yt_channels[1:]
+    # yt_channel,yt_vid = channel_top_videos(top_channels)
+    # yt_vid = list(set(yt_vid))
+    # yt_vid_id=[x.split('watch?v=')[1] for x in yt_vid]
     
-    print(top_channels)
-    print('*'*150)
-    print(yt_vid)
-    print(len(yt_channel))
-    print(len(yt_vid))
-    print(len(buffer_channels))
-    print('*'*150)
+    # print(top_channels)
+    # print('*'*150)
+    # print(yt_vid)
+    # print(len(yt_channel))
+    # print(len(yt_vid))
+    # print(len(buffer_channels))
+    # print('*'*150)
 
-    df_vid_details = yt_video_content(yt_vid_id)
-    print(df_vid_details)
-    # def search_by_country():
-    #     return
-
-
-
-
+    # df_vid_details = yt_video_content(yt_vid_id)
+    # print(df_vid_details)
+    watched_videos = pickle.load(open('../data/watched_yt_videos.pickle','rb'))
+    inp = 'data science'
+    test_dict = buffer_videos_to_list(inp,watched_videos)
+    print(len(test_dict[0])+len(test_dict[1]))
+    videos = [video for status,channel_dict in test_dict.items() for channel,channel_videos in channel_dict.items() for video in channel_videos]
+    print(len(videos))
