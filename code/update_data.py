@@ -10,20 +10,8 @@ from custom_logger import create_logger
 logger = create_logger('../data/test.log',__name__)
 
 def update_yt_watched_videos(watched_videos):
-    # if not os.path.exists('C:/SSD/project/chrome_history.csv') :
-    #     print('Creating chrome history file')
-    #     bh.write_browserhistory_csv()
-    #     df = pd.read_csv('chrome_history.csv',names=['links','title','timestamp'])
-    #     test = df['links'].apply(lambda x:x.split('=')[1] if ('www.youtube.com' in x and 'watch?v=' in x) else '')
-    #     test = [x for x in test if len(x)>1]
-    #     test = [x for x in test if x not in watched_videos]
-    # # print(test)
-    # else:
-    #     if (datetime.now()-datetime.fromtimestamp(os.path.getmtime('C:/SSD/project/chrome_history.csv'))).days>=1:
-    #         print('Updating history')
-    #         bh.write_browserhistory_csv()
     bh.write_browserhistory_csv()
-    df = pd.read_csv('../data/chrome_history.csv',names=['links','title','timestamp'])
+    df = pd.read_csv('chrome_history.csv',names=['links','title','timestamp'])
     test = df['links'].apply(lambda x:x if ('www.youtube.com' in x and 'watch?v=' in x and 'channel' not in x) else '')
     test = [x for x in test if len(x)>1]
     yt_vids = [x for x in test if x not in watched_videos]
