@@ -29,11 +29,11 @@ inp = input('What would you like to learn about today?:  ')
 inp=inp.lower()
 
 channel_vid_dict = buffer_videos_to_list(inp,watched_and_suggested_videos)
-videos = [video for status,channel_dict in channel_vid_dict.items() for channel,channel_videos in channel_dict.items() for video in channel_videos]
 final_video_list = []
 # print(channel_vid_dict)
 
 if channel_vid_dict!=0:
+    videos = [video for status,channel_dict in channel_vid_dict.items() for channel,channel_videos in channel_dict.items() for video in channel_videos]
     if (len(channel_vid_dict[0])+len(channel_vid_dict[1])<5) and (len(videos)>10):
         df_vid_details = buffer_videos.loc[buffer_videos['vid_link'].isin(videos),:]
         # print(df_vid_details)
@@ -69,10 +69,11 @@ if channel_vid_dict!=0:
                 final_video_list+=top_videos
  
 else:
-    yt_channels = find_yt_channels(inp)
+    yt_channels,flag = find_yt_channels(inp)
     channel_ids = get_channel_ids(yt_channels)
     buffer_channel_df = get_final_buffer_channels(inp.lower(),watched_channels,yt_channels,channel_ids)
-    buffer_channel_df.to_csv('../data/buffer_topic_channels.csv',mode='a',header=False,index=False)
+    if flag==1:
+        buffer_channel_df.to_csv('../data/buffer_topic_channels.csv',mode='a',header=False,index=False)
     channel_vid_dict = channel_top_videos(inp.lower(),buffer_channel_df,watched_and_suggested_videos)
 
     # print('Channels collected:',list(channel_vid_dict[0].keys())+list(channel_vid_dict[1].keys()))
