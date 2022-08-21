@@ -29,27 +29,44 @@ inp = input('What would you like to learn about today?:  ')
 inp=inp.lower()
 
 channel_vid_dict = buffer_videos_to_list(inp,watched_and_suggested_videos)
+videos = [video for status,channel_dict in channel_vid_dict.items() for channel,channel_videos in channel_dict.items() for video in channel_videos]
 final_video_list = []
 # print(channel_vid_dict)
 
 if channel_vid_dict!=0:
-    for status,channel_dict in channel_vid_dict.items():
-        for channel,videos in channel_dict.items():
-            # yt_vid_id=[x.split('watch?v=')[1] for x in videos]
-            df_vid_details = buffer_videos.loc[buffer_videos['vid_link'].isin(videos),:]
-            # print(df_vid_details)
+    if (len(channel_vid_dict[0])+len(channel_vid_dict[1])<5) and (len(videos)>10):
+        df_vid_details = buffer_videos.loc[buffer_videos['vid_link'].isin(videos),:]
+        # print(df_vid_details)
 
-            df_vect = df_vid_details[['duration','tokens']]
-            df = create_df_for_vect(df_vect)
+        df_vect = df_vid_details[['duration','tokens']]
+        df = create_df_for_vect(df_vect)
 
-            vocab_dict = pd.read_pickle('../data/train_vocab_dict.pickle')
-            corpus_doc_dict = corpus_doc_freq(df['tokens'],vocab_dict)
-            vec = df_vectorizer(df['tokens'],vocab_dict,corpus_doc_dict)
-            df_vid_details.loc[:,'token_score']=vec.sum(axis=1)
-            df_vid_details.sort_values(by='token_score',inplace=True,ascending=False)
+        vocab_dict = pd.read_pickle('../data/train_vocab_dict.pickle')
+        corpus_doc_dict = corpus_doc_freq(df['tokens'],vocab_dict)
+        vec = df_vectorizer(df['tokens'],vocab_dict,corpus_doc_dict)
+        df_vid_details.loc[:,'token_score']=vec.sum(axis=1)
+        df_vid_details.sort_values(by='token_score',inplace=True,ascending=False)
 
-            top_videos = df_vid_details.vid_link.tolist()[:2]
-            final_video_list+=top_videos
+        top_videos = df_vid_details.vid_link.tolist()[:10]
+        final_video_list+=top_videos
+    else:
+        for status,channel_dict in channel_vid_dict.items():
+            for channel,videos in channel_dict.items():
+                # yt_vid_id=[x.split('watch?v=')[1] for x in videos]
+                df_vid_details = buffer_videos.loc[buffer_videos['vid_link'].isin(videos),:]
+                # print(df_vid_details)
+
+                df_vect = df_vid_details[['duration','tokens']]
+                df = create_df_for_vect(df_vect)
+
+                vocab_dict = pd.read_pickle('../data/train_vocab_dict.pickle')
+                corpus_doc_dict = corpus_doc_freq(df['tokens'],vocab_dict)
+                vec = df_vectorizer(df['tokens'],vocab_dict,corpus_doc_dict)
+                df_vid_details.loc[:,'token_score']=vec.sum(axis=1)
+                df_vid_details.sort_values(by='token_score',inplace=True,ascending=False)
+
+                top_videos = df_vid_details.vid_link.tolist()[:2]
+                final_video_list+=top_videos
  
 else:
     yt_channels = find_yt_channels(inp)
@@ -103,9 +120,3 @@ try:
 except Exception as e:
     logger.exception(e)
     print('Sorry, our resources have exhausted for the day!')
-
-        
-            
-
-        
-
