@@ -7,7 +7,7 @@
 
 - There are two major issues with the Youtube Algorithm that recommends videos in the app- 
 
-  **1. It maximizes our screen time on the platform by recommending videos that we have a higher chance of clicking on.**
+  **1. It maximizes our screen time on the platform by recommending videos that we have a higher chance of being clicked on.**
   >How is that bad? Now, this is not a bad business model, but it certainly is disadvantageous for us as it only gives a little entertainment in exchange for keeping us in a potentially harmful dopamine loop.       
 
 
