@@ -44,7 +44,7 @@ The project consists of three main sections:
 - Thus, the method of 'Document Frequency Vectorization' was implemented from scratch in order to find top videos that are most similar to previously watched videos by the user.
 
 **3. Playlist Creation:**
-- Finally, a selected set of 10 videos (two videos per channel) are used to create a playlist.
+- Finally, a selected set of 10 videos (two videos per channel) is used to create a playlist.
 - Using the Google OAuth 2.0, a playlist is created in your Youtube account.
 
 
