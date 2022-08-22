@@ -6,12 +6,13 @@ from doc_freq_vectorizer import create_df_for_vect,doc_freq,corpus_doc_freq,df_v
 import pickle
 import numpy as np
 from create_playlist import load_credentials,initiate_playlist,add_videos_to_playlist
-from update_data import update_yt_watched_videos,update_pickle_files,update_csv_files
+from update_data import update_yt_watched_videos,update_pickle_files,update_csv_files,initiate_data
 pd.options.mode.chained_assignment = None
 from custom_logger import create_logger
 
 logger = create_logger('../data/test.log',__name__)
 
+initiate_data()
 watched_videos = pickle.load(open('../data/watched_yt_videos.pickle','rb'))
 update_yt_watched_videos(watched_videos)
 update_pickle_files()
