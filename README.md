@@ -23,8 +23,9 @@ watch videos about and it will create a playlist of personalised videos for you.
 </br>
 
 ### Demo:
+
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74452754/185818462-d277b840-cb1b-407b-a003-53370d6b5e8d.png" />
+  <img src="https://user-images.githubusercontent.com/74452754/185831954-e997f81a-21cd-42e4-8f58-2ca3112cc690.png" />
 </p>
 
 
