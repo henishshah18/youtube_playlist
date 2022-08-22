@@ -56,7 +56,7 @@ The project consists of three main sections:
 
 ## III. Environment Variables
 
-To run this project, you will firstly need to install the dependant libraries in your environment. To do this, use the following code:
+To run this project, you will first need to install the dependant libraries in your environment. To do this, use the following code:
 
 ```bash
 pip install -r requirements.txt
