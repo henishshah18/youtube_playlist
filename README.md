@@ -40,7 +40,7 @@ The project consists of three main sections:
 
 **2. Data Modelling:**
 - Unsupervised Content Based Recommendation Algorithm is used in this project. 
-- The two main features used for modelling are 'video_title' and 'video_tags'. As both these features contain only keywords, the use of traditional method of Tf-idf vectorisation is futile.
+- The two main features used for modelling are 'video_title' and 'video_tags'. As both these features contain only keywords, the use of traditional method of Tf-idf vectorization is futile.
 - Thus, the method of 'Document Frequency Vectorization' was implemented from scratch in order to find top videos that are most similar to previously watched videos by the user.
 
 **3. Playlist Creation:**
@@ -54,7 +54,7 @@ The project consists of three main sections:
   <img src="https://user-images.githubusercontent.com/74452754/185822742-fd263722-33cb-42da-9373-5f5dd9810717.PNG" />
 </p>
 
-## III. Environment Variables
+## III. Install packages
 
 To run this project, you will first need to install the dependant libraries in your environment. To do this, use the following code:
 
