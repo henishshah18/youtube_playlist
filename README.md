@@ -34,7 +34,7 @@ watch videos about and it will create a playlist of personalised videos for you.
 The project consists of three main sections:
 
 **1. Data Acquisition:**
- - Collecting browser history from local machine.
+ - Reading browser history to extract watched Youtube videos.
  - Scraping top Youtube channels for input topic.
  - Collecting the data of videos from those channels through Youtube Data API.
 
