@@ -87,6 +87,7 @@ To deploy this project, run the following command:
 ```bash
   python3 main.py
 ```
+>***Note*** - Make sure you close all the web browser windows before executing the code. Else, the program will not be able to read the browsing history.
 
 ## VI. Limitations
 - The model performs very well for relatively broad topics for which there are established Youtube channels available but performs inconsistently with specific topics for eg. World War II. This can be overcome by introducing the alternative approach of scraping Youtube directly for those niche topics.
