@@ -33,9 +33,9 @@ import pickle
 # df = pd.DataFrame(columns=['invalid_vid_link'])
 # df.to_csv('../data/invalid_videos.csv',index=False)
 
-df = pd.DataFrame(columns=['topic', 'vid_link', 'title', 'description', 'tags', 'duration',
-       'channel_id', 'channel_name', 'meta_data', 'tokens', 'channel_status', 'channel_link','token_score'])
-df.to_csv('../data/buffer_topic_videos.csv',index=False)
+# df = pd.DataFrame(columns=['topic', 'vid_link', 'title', 'description', 'tags', 'duration',
+#        'channel_id', 'channel_name', 'meta_data', 'tokens', 'channel_status', 'channel_link','token_score'])
+# df.to_csv('../data/buffer_topic_videos.csv',index=False)
 
-df = pd.DataFrame(columns=['topic','channel_link','channel_status'])
-df.to_csv('../data/buffer_topic_channels.csv',index=False)
+# df = pd.DataFrame(columns=['topic','channel_link','channel_status'])
+# df.to_csv('../data/buffer_topic_channels.csv',index=False)
