@@ -68,7 +68,7 @@ pip install -r requirements.txt
   1. Follow the steps given [here](https://blog.hubspot.com/website/how-to-get-youtube-api-key) to get an access.
   2. Paste the developerKey inside `/data/config.ini` file.
 
-- In order to create a playlist in your account, you will require an OAuth '**client_id**' and '**client_secret code**'.
+- In order to create a playlist in your account, you will require an OAuth '**client_id**' and '**client_secret**' code.
   1. Follow the steps given [here](https://support.google.com/workspacemigrate/answer/9222992?hl=en)
 
   >***Note*** - When you are in OAuth Consent screen inside your created project, under 'Test User' section add the google account in which you want your playlists to be created.
