@@ -96,5 +96,5 @@ To deploy this project, run the following command:
 
 ## VII. Support
 
-For support or any queries, email henishshah18@gmail.com
+For support or any queries, email henishah@iu.edu
 
