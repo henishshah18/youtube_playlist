@@ -9,6 +9,37 @@ from custom_logger import create_logger
 
 logger = create_logger('../data/test.log',__name__)
 
+def initiate_data():
+    if not os.path.exists('../data/yt_watched_final_details.csv'):
+        df = pd.DataFrame(columns=['vid_link','vid_title','description','tags','duration','channel_id','channel_name','meta_data','tokens'])
+        df.to_csv('../data/yt_watched_final_details.csv',index=False)
+    
+    if not os.path.exists('../data/yt_shorts.csv'):
+        df = pd.DataFrame(columns=['yt_shorts_link'])
+        df.to_csv('../data/yt_shorts.csv',index=False)
+    
+    if not os.path.exists('../data/suggested_yt_videos.pickle'):
+        suggested_vids=[]
+        pickle.dump(suggested_vids, open("../data/suggested_yt_videos.pickle", "wb" ))
+
+    if not os.path.exists('../data/invalid_videos.csv'):
+        df = pd.DataFrame(columns=['invalid_vid_link'])
+        df.to_csv('../data/invalid_videos.csv',index=False)
+    
+    if not os.path.exists('../data/buffer_topic_channels.csv'):
+        df = pd.DataFrame(columns=['topic','channel_link','channel_status'])
+        df.to_csv('../data/buffer_topic_channels.csv',index=False)
+    
+    if not os.path.exists('../buffer_topic_videos.csv'):
+        df = pd.DataFrame(columns=['topic', 'vid_link', 'title', 'description', 'tags', 'duration', 
+        'channel_id', 'channel_name', 'meta_data', 'tokens', 'channel_status', 'channel_link','token_score'])
+        df.to_csv('../data/buffer_topic_videos.csv',index=False)
+    
+    if not os.path.exists('../data/watched_yt_videos.pickle'):
+        watched_vids=[]
+        pickle.dump(watched_vids,open('../data/watched_yt_videos.pickle','wb'))
+
+
 def update_yt_watched_videos(watched_videos):
     bh.write_browserhistory_csv()
     df = pd.read_csv('chrome_history.csv',names=['links','title','timestamp'])
