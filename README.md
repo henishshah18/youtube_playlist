@@ -7,7 +7,7 @@ Ever went down that rabbit hole where you are watching something on Youtube, and
 
 There are two major issues with the Youtube Algorithm that recommends videos on our wall. 
 
-**1. It maximizes your screen time on the platform by recommending videos that you have a higher chance of clicking on.**
+**1. It maximizes our screen time on the platform by recommending videos that we have a higher chance of clicking on.**
 >How is that bad? Now, this is not a bad business model, but it certainly is disadvantageous as it only gives us is a little entertainment in exchange for keeping us in a potentially harmful dopamine loop.       
 
 
@@ -30,9 +30,13 @@ watch videos about and it will create a playlist of personalised videos for you.
 
 
 
-## Demo
+### Demo:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74452754/185818462-d277b840-cb1b-407b-a003-53370d6b5e8d.png" />
+</p>
 
-![App Screenshot](https://user-images.githubusercontent.com/74452754/185793544-ebc6e236-9cee-40d3-ad5e-4d8bad723efd.png)
+
+
 
 
 ## Environment Variables
