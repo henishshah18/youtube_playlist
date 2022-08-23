@@ -41,7 +41,7 @@ The project consists of three main sections:
 **2. Data Modelling:**
 - Unsupervised Content Based Recommendation Algorithm is used in this project. Thus, based on the input features, similar videos are grouped together by a similarity metric. For more details about the algorithm, click [here](https://developers.google.com/machine-learning/recommendation/content-based/basics).
 - The two main features used for modelling are 'video_title' and 'video_tags'. As both these features contain only keywords, the use of traditional method of Tf-idf vectorization is futile.
-- Thus, the method of 'Document Frequency Vectorization' was implemented from scratch and a summation of these vector values was used as the similarity metric in order to find top videos that are most similar to previously watched videos by the user.
+- Thus, the method of 'Document Frequency Vectorization' was implemented from scratch and a summation of these vector values was used as the similarity metric to find top videos that are most similar to the previously watched videos by the user.
 
 **3. Playlist Creation:**
 - Finally, a selected set of 10 videos (two videos per channel) is used to create a playlist.
